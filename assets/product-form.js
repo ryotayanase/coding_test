@@ -127,9 +127,13 @@ if (!customElements.get('product-form')) {
       toggleSubmitButton(disable = true, text) {
         if (disable) {
           this.submitButton.setAttribute('disabled', 'disabled');
+          if (text === window.variantStrings.soldOut || text === window.variantStrings.unavailable || text === window.variantStrings.unavailable_with_option) {
+            this.submitButton.classList.add('disabled');
+          }
           if (text) this.submitButtonText.textContent = text;
         } else {
           this.submitButton.removeAttribute('disabled');
+          this.submitButton.classList.remove('disabled');
           this.submitButtonText.textContent = window.variantStrings.addToCart;
         }
       }
