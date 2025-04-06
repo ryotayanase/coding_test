@@ -1,0 +1,36 @@
+/* task a,b,c */
+
+.template_product{
+  .product-form__buttons{
+    .product-form__submit{
+      background: green;
+      color: #fff;
+
+      &:hover{
+        background: blue;
+      }
+
+      &.disabled{
+        background: red;
+      }
+
+      &:after{
+        display: none!important;
+      }
+    }
+
+    .product-form__inventory-info{
+      text-align: center;
+      margin: 0 0 16px;
+      font-weight: 600;
+      display: block;
+      line-height: 1;
+    }
+
+    .product-form__meta-sizetext{
+      text-align: center;
+    }
+  }
+}
+
+/* ------------- task a,b,c */
