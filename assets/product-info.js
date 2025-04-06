@@ -191,9 +191,8 @@ if (!customElements.get('product-info')) {
           updateSourceFromDestination('Inventory', ({ innerText }) => innerText === '');
           updateSourceFromDestination('Volume');
           updateSourceFromDestination('Price-Per-Item', ({ classList }) => classList.contains('hidden'));
-          updateSourceFromDestination('MetaSizeText', ({ querySelector }) => 
-            !querySelector('p') || querySelector('p').innerText === '');
-
+          updateSourceFromDestination('MetaSizeText', ({ innerText }) => innerText === '');
+          
           this.updateQuantityRules(this.sectionId, html);
           this.querySelector(`#Quantity-Rules-${this.dataset.section}`)?.classList.remove('hidden');
           this.querySelector(`#Volume-Note-${this.dataset.section}`)?.classList.remove('hidden');
