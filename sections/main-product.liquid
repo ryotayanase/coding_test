@@ -470,6 +470,7 @@
                   product_form_id: product_form_id,
                   section_id: section.id,
                   show_inventory_info: block.settings.show_inventory_info,
+                  show_meta_sizetext: block.settings.show_meta_sizetext,
                   show_pickup_availability: true
                 -%}
               {%- when 'rating' -%}
@@ -862,6 +863,12 @@
           "id": "show_inventory_info",
           "default": true,
           "label": "在庫に関するメッセージを表示する"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_meta_sizetext",
+          "default": true,
+          "label": "バリエーションのメタフィールド「サイズ説明文」の内容を表示する"
         },
         {
           "type": "checkbox",

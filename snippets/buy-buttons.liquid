@@ -108,6 +108,12 @@
             {% endif %}
           </div>
           {% endif %}
+
+          {% if show_meta_sizetext and product.selected_or_first_available_variant.metafields.custom.size_text != blank %}
+            <div id="MetaSizeText-{{ section.id }}" class="product-form__meta-sizetext">
+              <p>{{ product.selected_or_first_available_variant.metafields.custom.size_text }}</p>
+            </div>
+          {% endif %}
           
           {%- if show_dynamic_checkout -%}
             {{ form | payment_button }}

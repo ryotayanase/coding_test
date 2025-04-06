@@ -19,5 +19,8 @@
   display: block;
   line-height: 1;
 }
+.template_product .product-form__buttons .product-form__meta-sizetext {
+  text-align: center;
+}
 
 /* ------------- task a */
