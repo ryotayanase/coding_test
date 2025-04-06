@@ -98,6 +98,17 @@
             </span>
             {%- render 'loading-spinner' -%}
           </button>
+
+          {% if show_inventory_info %}
+          <div id="Inventory-{{ section.id }}" class="product-form__inventory-container {% if product.selected_or_first_available_variant.inventory_quantity == 0 %}hidden{% endif %}">
+            {% if product.selected_or_first_available_variant.inventory_quantity < 5 and product.selected_or_first_available_variant.inventory_quantity > 0 %} 
+              <span class="product-form__inventory-info">Low stock</span> 
+            {% elsif product.selected_or_first_available_variant.inventory_quantity >= 5 %} 
+              <span class="product-form__inventory-info">Available!</span> 
+            {% endif %}
+          </div>
+          {% endif %}
+          
           {%- if show_dynamic_checkout -%}
             {{ form | payment_button }}
           {%- endif -%}
